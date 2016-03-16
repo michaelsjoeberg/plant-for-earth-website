@@ -1,0 +1,165 @@
+
+// Pages
+// --------------------------
+
+/* Misc */
+.section-heading { margin-top: 0; }
+
+.call-to-action h2 { margin: 0; }
+
+@media(min-width: 992px) {
+    .call-to-action h2 { margin: 0.9rem auto 0; }
+    .call-to-action .btn { margin: 0; }
+}
+
+.article-wrapper {
+    -webkit-column-count: 1; /* Chrome, Safari, Opera */
+    -moz-column-count: 1; /* Firefox */
+    column-count: 1;
+}
+
+.no-gutter > [class*=col-] { 
+    padding-right           : 0;
+    padding-left            : 0;
+}
+
+.call-to-boxes {
+    margin-bottom           : -100px;
+}
+
+.call-to-boxes-inner {
+    padding                 : 30px;
+}
+
+/* Including */
+.service-box {
+    background-color        : transparent;
+    // margin                  : 50px auto 0;
+    // max-width               : 400px;
+    padding                 : 30px;
+    -webkit-transition      : all .35s;
+    -moz-transition         : all .35s;
+    transition              : all .35s;
+}
+
+.service-box:hover {
+    background-color        : $color-greyscale-light;
+
+    &.service-box-hover-green-dark  { background-color: $color-primary-2-dark; }
+    &.service-box-hover-yellow-dark { background-color: $color-primary-1-dark; }
+}
+
+.service-box p { 
+    margin-bottom           : 0; 
+    font-size               : 1.6rem;
+}
+
+.service-box i {
+    font-size               : 5rem; 
+}
+
+.service-box h3 {
+    margin                  : 0; 
+    margin-top              : 1.4rem;
+}
+
+/* Portfolio */
+.portfolio-box {
+    display                 : block;
+    position                : relative;
+    margin                  : 0 auto;
+    max-width               : 100%;
+}
+
+.portfolio-box .portfolio-box-caption {
+    display                 : block;
+    position                : absolute;
+    bottom                  : 0;
+    width                   : 100%;
+    height                  : 100%;
+    text-align              : center;
+    color                   : $color-white;
+    opacity                 : 0;
+    -webkit-transition      : all .35s;
+    -moz-transition         : all .35s;
+    transition              : all .35s;
+
+    &.portfolio-hover-yellow { background: rgba($color-primary-1-base, .9); }
+    &.portfolio-hover-green { background: rgba($color-primary-2-base, .9); }
+}
+
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content {
+    position                : absolute;
+    top                     : 50%;
+    width                   : 100%;
+    text-align              : center;
+    transform               : translateY(-50%);
+}
+
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category,
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+    color                   : $color-white; 
+    padding                 : 0 15px;
+    font-family             : $font-family-base;
+}
+
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
+    text-transform          : uppercase;
+    font-size               : 14px;
+    font-weight             : 600;
+}
+
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name { font-size: 2rem; }
+
+.portfolio-box:hover .portfolio-box-caption { opacity: 1; }
+
+@media(min-width:768px) {
+    .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category { font-size: 2rem; }
+
+    .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name { font-size: 3rem; }
+}
+
+/* Footer */
+footer p.footer-copyright { 
+    color                   : rgba($color-white,0.5);
+}
+
+footer p.footer-copyright > i {
+    display                 : inline-block;
+    font-size               : 1.4em;
+    vertical-align          : -8%;
+}
+
+footer p.footer-copyright a { 
+    color                   : rgba($color-white,1);
+}
+
+footer p.footer-copyright a:hover {
+    text-decoration         : none;
+}
+
+footer .footer-links ul { list-style: none; }
+
+footer .footer-links ul li {
+    padding: 10px 30px;
+}
+
+footer .footer-links ul li:hover {
+    background-color: $color-greyscale-dark;
+}
+
+footer .footer-links ul li:hover > a {
+    color                   : rgba($color-white,1);
+}
+
+footer .footer-links ul li > a {
+    color                   : rgba($color-white,0.5); 
+    font-size               : 2rem;
+    font-weight             : $font-weight-normal;
+}
+
+footer img.footer-brand {
+    max-width               : 320px;
+    height                  : auto;
+    padding-bottom          : 15px;
+}

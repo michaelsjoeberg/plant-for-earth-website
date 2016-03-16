@@ -1,0 +1,232 @@
+
+// Base
+// --------------------------
+
+/* General */
+html, 
+body {
+	width 				    : 100%;
+    height 				    : 100%;
+}
+
+body {
+	padding-top 		    : 0;
+    letter-spacing          : 1px;
+	font-family 		    : $font-family-base;
+	font-size 			    : $font-size-base;
+	line-height 		    : $line-height-base;
+	font-weight 		    : $font-weight-normal;
+}
+
+body { webkit-tap-highlight-color: $color-greyscale-base; }
+
+::-moz-selection {
+    text-shadow             : none;
+    color                   : $color-white;
+    background              : $color-greyscale-base;
+}
+
+::selection {
+    text-shadow             : none;
+    color                   : $color-white;
+    background              : $color-greyscale-base;
+}
+
+ul, menu, dir {
+    -webkit-margin-before   : 0em;
+    -webkit-margin-after    : 0em;
+    -webkit-margin-start    : 0px;
+    -webkit-margin-end      : 0px;
+    -webkit-padding-start   : 0px;
+}
+
+img::selection {
+    color                   : $color-white;
+    background              : 0 0;
+}
+
+img::-moz-selection {
+    color                   : $color-white;
+    background              : 0 0;
+}
+
+section,
+.section { padding: 100px 0; }
+
+/* Text */
+p {
+    margin-bottom           : 20px;
+    font-size               : 2rem;
+}
+
+p.text-muted { 
+    color                   : inherit;
+    opacity                 : 0.75;
+    filter                  : alpha(opacity=75);
+}
+
+p.text-small { font-size: 1.4rem; }
+
+p.text-white { color: $color-white; }
+
+a {
+    color                   : $color-greyscale-base;
+    text-decoration         : none; 
+    -webkit-transition      : all .35s;
+    -moz-transition         : all .35s;
+    transition              : all .35s;
+
+    &.link-color-white       { color: $color-white; opacity: 1; }
+    &.link-color-white-muted { color: $color-white; opacity: .75; }
+    &.link-color-primary-1   { color: $color-primary-1-base; }
+    &.link-color-primary-2   { color: $color-primary-2-base; }
+}
+
+a:hover,
+a:focus { text-decoration: none; opacity: 1 !important; } 
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 { 
+    font-family             : $font-family-base; 
+    font-weight             : $font-weight-bold; 
+}
+
+.heading-small { 
+    font-size               : 1.6rem;
+    line-height             : 2.2rem;
+}
+
+/* Alerts */
+.alert {
+    border                  : 0;
+    border-radius           : 0;
+}
+
+.alert .close {
+    color                   : inherit;
+    text-shadow             : 0;
+    opacity                 : .75;
+    filter                  : alpha(opacity=75);
+}
+
+.alert .close:hover { opacity: 1; filter: alpha(opacity=100); }
+
+.alert-info    { background-color: rgba($color-alert-info, .1); color: darken($color-alert-info, 5%); }
+.alert-danger  { background-color: rgba($color-alert-danger, .15); color: darken($color-alert-danger, 5%); }
+.alert-warning { background-color: rgba($color-alert-warning, .3);; color: darken($color-alert-warning, 20%); }
+.alert-success { background-color: rgba($color-alert-success, .25); color: darken($color-alert-success, 15%); }
+
+.alert-info .alert-link    { color: darken($color-alert-info, 5%); }
+.alert-danger .alert-link  { color: darken($color-alert-danger, 5%); }
+.alert-warning .alert-link { color: darken($color-alert-warning, 20%); }
+.alert-success .alert-link { color: darken($color-alert-success, 15%); }
+
+/* Backgrounds */
+.bg-color {
+    color                   : $color-white;
+    background-color        : $color-greyscale-base;
+
+    &.bg-color-white           { background-color: $color-white; color: $color-greyscale-base; }
+    &.bg-color-greyscale-light { background-color: $color-greyscale-light; color: $color-greyscale-base; }
+    &.bg-color-primary-1       { background-color: $color-primary-1-base; }
+    &.bg-color-primary-2       { background-color: $color-primary-2-base; }
+}
+
+/* Text colors */
+
+.text-color {
+    color                   : $color-greyscale-base;
+
+    &.text-color-white      { color: $color-white; }
+    &.text-color-primary-1  { color: $color-primary-1-base; }
+    &.text-color-primary-2  { color: $color-primary-2-base; }
+}
+
+/* Misc */
+code {
+    font-size               : 90%;
+    color                   : darken($color-alert-danger, 15%);
+    background-color        : $color-greyscale-light;
+    border-radius           : 0;
+}
+
+.border-muted {
+    border                  : 10px solid;
+    border-color            : $color-greyscale-light;
+}
+
+/* Modal */
+.modal-content {
+    position                : relative;
+    background-color        : $color-white;
+    color                   : $color-greyscale-base; 
+    border                  : 0;
+    border                  : 0;
+    border-radius           : 0;
+    -webkit-box-shadow      : 5px 5px 0 rgba(0,0,0,.15);
+    box-shadow              : 5px 5px 0 rgba(0,0,0,.15);
+    background-clip         : padding-box;
+    outline                 : 0;
+}
+
+.modal-content .close {
+    color                   : $color-greyscale-base;
+    text-shadow             : 0;
+    opacity                 : 0.75;
+    filter                  : alpha(opacity=75);
+    outline                 : 0; 
+}
+
+.modal-content .close:hover { opacity: 1; filter: alpha(opacity=100); }
+
+/* Forms */
+form input,
+form select {
+    -webkit-appearance      : textfield;
+    width                   : 100%;
+    padding                 : 6px;
+    font-size               : 2rem;
+    color                   : $color-primary-1-base;
+    background-color        : $color-greyscale-light;
+    border                  : 2px solid;
+    border-color            : $color-white;
+    border-radius           : 0;
+    border-image-source     : initial;
+    border-image-slice      : initial;
+    border-image-width      : initial;
+    border-image-outset     : initial;
+    border-image-repeat     : initial;
+    -webkit-rtl-ordering    : logical;
+    -webkit-user-select     : text;
+    cursor                  : auto;
+    outline                 : none; 
+}
+
+form input:focus,
+form select:focus { border-color: $color-primary-1-base; }
+
+label { width: 100%; }
+
+label > input                { display: none; }
+label > input + span         { cursor: pointer; width: 100%; }
+
+label > input:checked + span { 
+    background-color: $color-primary-1-base !important;
+    color: $color-white !important;
+}
+
+.input-group .input-group-addon {
+    width                   : 100%; 
+    padding                 : 6px;
+    font-size               : 1.2rem;
+    font-weight             : $font-weight-normal; 
+    color                   : $color-primary-1-base;
+    background-color        : $color-greyscale-light;
+    border                  : 0 solid;
+    border-color            : $color-white;
+    border-radius           : 0;
+}

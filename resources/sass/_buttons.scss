@@ -1,0 +1,102 @@
+
+// Buttons
+// --------------------------
+
+/* General */
+.btn {
+    border                  : 0;
+    border-radius           : 300px;
+    text-transform          : uppercase;
+    font-family             : $font-family-base;
+    font-weight             : $font-weight-bold;
+    padding 				: 15px 30px;
+    margin-top              : 20px;
+
+    white-space             : pre-wrap;   
+    white-space             : -moz-pre-wrap;
+    white-space             : -pre-wrap; 
+    white-space             : -o-pre-wrap;  
+    word-wrap               : break-word;
+}
+
+.btn-primary {
+	color 					: $color-white;
+	background-color 		: $color-greyscale-base;
+	-webkit-transition      : all .35s;
+    -moz-transition         : all .35s;
+    transition              : all .35s;
+
+    /* Buttons colors */
+	&.btn-white           { background-color: $color-white; color: $color-greyscale-base; }
+	&.btn-primary-1-base  { background-color: $color-primary-1-base; }
+    &.btn-primary-2-base  { background-color: $color-primary-2-base; }
+    &.btn-greyscale-light { background-color: $color-greyscale-light; color: $color-greyscale-base; }
+    &.btn-greyscale-dark  { background-color: $color-greyscale-dark; }
+}
+
+.btn-xl {
+    font-size               : 2.0rem;
+    padding                 : 25px 50px;
+}
+
+.btn-call-to-action {
+    text-transform          : none; 
+    font-weight             : $font-weight-normal; 
+    font-size               : 2.0rem;
+}
+
+.btn-call-to-action-lg { padding: 30px 60px; }
+
+/* Hover */
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary.focus,
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+    color                   : $color-white;
+    background-color        : $color-greyscale-base;
+    outline                 : none;  
+
+    /* Hover colors */
+    &.btn-hover-white  	        { background-color: $color-white; color: $color-greyscale-base; }
+    &.btn-hover-greyscale-dark  { background-color: $color-greyscale-dark; }
+    &.btn-hover-greyscale-light  { background-color: $color-greyscale-light; color: $color-greyscale-base; }
+    &.btn-hover-primary-1-base  { background-color: $color-primary-1-base; }
+    &.btn-hover-primary-1-dark  { background-color: $color-primary-1-dark; }
+    &.btn-hover-primary-2-base  { background-color: $color-primary-2-base; }
+    &.btn-hover-primary-2-light { background-color: $color-primary-2-light; }
+    &.btn-hover-primary-2-dark  { background-color: $color-primary-2-dark; }
+}
+
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary { background-image: none; }
+
+.btn-primary.disabled,
+.btn-primary[disabled],
+fieldset[disabled] .btn-primary,
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus,
+.btn-primary[disabled]:focus,
+fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled.focus,
+.btn-primary[disabled].focus,
+fieldset[disabled] .btn-primary.focus,
+.btn-primary.disabled:active,
+.btn-primary[disabled]:active,
+fieldset[disabled] .btn-primary:active,
+.btn-primary.disabled.active,
+.btn-primary[disabled].active,
+fieldset[disabled] .btn-primary.active {
+    background-color        : $color-greyscale-light;
+    border-color            : $color-white;
+    color                   : $color-greyscale-base; 
+}
+
+.btn-primary .badge {
+    background-color        : $color-white;
+    color                   : $color-greyscale-base;
+}
