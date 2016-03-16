@@ -1,2 +1,3 @@
-# plant-for-earth-website
-Website for Plant for Earth project, including all dependencies.
+# Plant for Earth
+Website for project, including all dependencies.
+
